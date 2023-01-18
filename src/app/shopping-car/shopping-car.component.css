@@ -1,0 +1,14 @@
+.number{
+    position: absolute;
+    
+    top: -1px;
+    height: 22px;
+    width: 22px;
+    background: #ff9533;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 22px;
+}

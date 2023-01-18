@@ -1,0 +1,112 @@
+<p>pay-books-page works!</p>
+
+<div *ngIf="books.length<=0">
+  <h2></h2>
+</div>
+<div class="container" *ngIf="books.length >0">
+  <table>
+    <thead>
+      <tr>
+        <th>artículo</th>
+        <th>título</th>
+        <th>precio</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of books;index as i">
+        <td>
+          <img src={{item.src}} style="width:15vh;height:10vh;" class="card-img-top" alt="...">
+        </td>
+        <td>{{item.title}} </td>
+        <td>${{item.price}} </td>
+        <td> 
+          <button (click)="eliminar(i)">eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div *ngIf="books">
+    <app-price-card [books]="books"></app-price-card>
+  </div>
+</div>
+<!--
+<table *ngIf="asd.length >0">
+  <thead>
+    <tr>
+      <th>artículo</th>
+      <th class="mi-clase-izquierda">titulo</th>
+      <th>precio</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr *ngFor="let item of asd;">
+      <app-pay-book-card [libro]="item"></app-pay-book-card>
+    </tr>
+
+  </tbody>
+</table>
+-->
+
+<div *ngIf="child.length<=0">
+  <h2></h2>
+</div>
+<div class="container" *ngIf="child.length >0">
+  <table>
+    <thead>
+      <tr>
+        <th>artículo</th>
+        <th>título</th>
+        <th>precio</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of child;index as i">
+        <td>
+          <img src={{item.src}} style="width:15vh;height:10vh;" class="card-img-top" alt="...">
+        </td>
+        <td>{{item.title}} </td>
+        <td>${{item.price}} </td>
+        <td> 
+          <button (click)="eliminar(i)">eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div *ngIf="child">
+    <app-price-card [books]="child"></app-price-card>
+  </div>
+</div>
+
+<div *ngIf="avent.length<=0">
+  <h2></h2>
+</div>
+<div class="container" *ngIf="avent.length >0">
+  <table>
+    <thead>
+      <tr>
+        <th>artículo</th>
+        <th>título</th>
+        <th>precio</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of avent;index as i">
+        <td>
+          <img src={{item.src}} style="width:15vh;height:10vh;" class="card-img-top" alt="...">
+        </td>
+        <td>{{item.title}} </td>
+        <td>${{item.price}} </td>
+        <td> 
+          <button (click)="eliminar(i)">eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div *ngIf="avent">
+    <app-price-card [books]="avent"></app-price-card>
+  </div>
+</div>
