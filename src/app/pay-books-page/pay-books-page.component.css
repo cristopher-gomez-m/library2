@@ -6,3 +6,14 @@
 td,th{
     padding: 1rem;
 }
+
+@media only screen and (max-width: 600px) {
+    /* Estilos específicos para pantallas menores a 600px */
+    .container {
+     flex-wrap: wrap;
+    }
+    table {
+      width: 100%;
+    }
+    /* Otros estilos */
+  }

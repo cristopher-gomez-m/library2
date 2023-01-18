@@ -108,8 +108,6 @@ export class BookFinderService {
   }
   filterBooks(title:String){
     this.filteredBooks = this.books.filter(book => book.title.toLowerCase().includes(title.toLowerCase()));
-    this.filteredBooks = this.child.filter(book => book.title.toLowerCase().includes(title.toLowerCase()));
-    this.filteredBooks = this.avent.filter(book => book.title.toLowerCase().includes(title.toLowerCase()));
     this.enviarMensajeSubject.next(this.filteredBooks);
   }
 
