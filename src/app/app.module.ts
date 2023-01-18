@@ -27,6 +27,7 @@ import { MatFormFieldModule } from "@angular/material/form-field";
 import { HttpClientModule } from "@angular/common/http";
 import { SearchEngineComponent } from './search-engine/search-engine.component';
 import { SearchPageComponent } from './search-page/search-page.component';
+import { CardBookComponent } from './card-book/card-book.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +40,8 @@ import { SearchPageComponent } from './search-page/search-page.component';
     DetallesProductoComponent,
     SearchEngineComponent,
     SearchPageComponent,
-    FooterComponent
+    FooterComponent,
+    CardBookComponent
   ],
   imports: [
     BrowserModule,

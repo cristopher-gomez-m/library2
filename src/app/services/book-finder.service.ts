@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
 import { Book } from '../interfaces/book';
 
 @Injectable({
@@ -100,7 +101,8 @@ export class BookFinderService {
   ];
 
   filteredBooks: Book[]=[];
-
+  private enviarMensajeSubject = new Subject<Book[]>();
+  enviarMensajeObservable = this.enviarMensajeSubject.asObservable();
   getBooks() {
     return this.books;
   }
@@ -108,6 +110,7 @@ export class BookFinderService {
     this.filteredBooks = this.books.filter(book => book.title.toLowerCase().includes(title.toLowerCase()));
     this.filteredBooks = this.child.filter(book => book.title.toLowerCase().includes(title.toLowerCase()));
     this.filteredBooks = this.avent.filter(book => book.title.toLowerCase().includes(title.toLowerCase()));
+    this.enviarMensajeSubject.next(this.filteredBooks);
   }
 
   getChild(){
@@ -118,5 +121,7 @@ export class BookFinderService {
     return this.avent;
   }
   
-  
+  getFilteredBooks(){
+    return this.filteredBooks;
+  }
 }

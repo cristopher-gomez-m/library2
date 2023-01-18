@@ -1,0 +1,12 @@
+img{
+    display: block;
+}
+
+.card-body{
+    width: auto;
+    margin: 10px;
+}
+
+.button{
+    margin: 5px;
+}
